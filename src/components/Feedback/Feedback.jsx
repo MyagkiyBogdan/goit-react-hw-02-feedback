@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { nanoid } from 'nanoid';
 class Feedback extends Component {
   static propTypes = {};
 
