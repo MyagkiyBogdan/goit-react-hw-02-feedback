@@ -2,3 +2,27 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+.feedbackList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedbackWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedbackCount {
+  font-weight: 500;
+  padding: 2px;
+  min-width: 25px;
+  border-radius: 5px;
+  display: block;
+  margin-top: 5px;
+  background-color: rgb(42, 90, 221);
+  color: rgb(238, 255, 0);
+}

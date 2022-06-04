@@ -6,13 +6,20 @@ class Statistics extends Component {
   render() {
     return (
       <div className={styles.text}>
-        {Object.keys(this.props.state).map(data => (
-          <p key={data}>
-            {this.props.firstLetterLarge(data)}: {this.props.state[data]}
-          </p>
-        ))}
-        <p>Total: {this.props.total()}</p>
-        <p>Positive feedback: {this.countPositiveFeedbackPercentage()}%</p>
+        <div className={styles.feedbackList}>
+          {Object.keys(this.props.state).map(data => (
+            <p key={data} className={styles.feedbackWrapper}>
+              {this.props.firstLetterLarge(data)}
+              <span className={styles.feedbackCount}>
+                {this.props.state[data]}
+              </span>
+            </p>
+          ))}
+        </div>
+        <div>
+          <p>Total: {this.props.total()}</p>
+          <p>Positive feedback: {this.countPositiveFeedbackPercentage()}%</p>
+        </div>
       </div>
     );
   }
