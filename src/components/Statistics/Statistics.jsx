@@ -29,13 +29,20 @@ function Statistics({
         ))}
       </div>
       <div>
-        <p>Total: {total()}</p>
-        <p>Positive feedback: {positivePercentage()}%</p>
+        <p>Total: {total}</p>
+        <p>Positive feedback: {positivePercentage}%</p>
       </div>
     </div>
   );
 }
 
-// Statistics.propTypes = {};
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+  firstLetterLarge: PropTypes.func,
+};
 
 export default Statistics;
